@@ -1,0 +1,24 @@
+*background: #000000
+*foreground: #FFFFFF
+
+
+*faceName: xft:JetBrainsMono Nerd Font Mono:style=Regular:size=12
+*boldFont: xft:JetBrainsMono Nerd Font Mono:style=Bold
+*italicFont: xft:JetBrainsMono Nerd Font Mono:style=Italic
+
+*termName: xterm-256color
+
+xterm*uft8: 2
+xterm*locale: true
+xterm*renderFont: true
+
+! Fallback fonts (for symbols/emojis)
+xterm*faceNameDoublesize: xft:Noto Color Emoji:size=12
+xterm*fontDoublesize: xft:Noto Color Emoji:size=12
+
+! Enable clipboard integration
+xterm*selectToClipboard: true      
+
+xterm*VT100.translations: \
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
