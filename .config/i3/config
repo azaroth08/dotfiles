@@ -192,43 +192,43 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#        position top
-#}
-set $rosewater #f5e0dc
-set $flamingo  #f2cdcd
-set $pink      #f5c2e7
-set $mauve     #cba6f7
-set $red       #f38ba8
-set $maroon    #eba0ac
-set $peach     #fab387
-set $yellow    #f9e2af
-set $green     #a6e3a1
-set $teal      #94e2d5
-set $sky       #89dceb
-set $sapphire  #74c7ec
-set $blue      #89b4fa
-set $lavender  #b4befe
-set $text      #cdd6f4
-set $subtext1  #bac2de
-set $subtext0  #a6adc8
-set $overlay2  #9399b2
-set $overlay1  #7f849c
-set $overlay0  #6c7086
-set $surface2  #585b70
-set $surface1  #45475a
-set $surface0  #313244
-set $base      #1e1e2e
-set $mantle    #181825
-set $crust     #11111b
+# Tokyo Night Storm (Aligned with Kitty Terminal)
+# Base
+set $base          #1a1b26
+set $mantle        #161622
+set $crust         #11111b
 
-# target                 title     bg    text      indicator    border
-client.focused           $mantle   $mauve $mantle  $rosewater $mauve
-client.focused_inactive  $overlay0 $base  $text    $rosewater $overlay0
-client.unfocused         $overlay0 $base  $text    $rosewater $overlay0
-client.urgent            $peach    $base  $peach   $overlay0  $peach
-client.placeholder       $overlay0 $base  $text    $overlay0  $overlay0
-client.background        $base
+# Text/UI
+set $text          #c0caf5    # foreground
+set $text_muted    #a9b1d6    # subtext1
+set $text_faded    #565f89    # overlay2 (comments)
+set $border_active #7aa2f7    # active_border_color (color4)
+set $border_inactive #292e42  # inactive_border_color
+
+# Core Palette
+set $red           #f7768e    # color1 (errors)
+set $orange        #ff9e64    # color16 (numbers/constants)
+set $yellow        #e0af68    # color3 (operators)
+set $green         #9ece6a    # color2 (strings)
+set $teal          #73daca    # url_color
+set $blue          #7aa2f7    # color4 (functions)
+set $purple        #bb9af7    # color5 (keywords)
+set $cyan          #7dcfff    # color6
+
+# Extended
+set $red_bright    #ff899d    # color9
+set $red_urgent    #db4b4b    # color17 (kitty's extended red)
+set $orange_bright #faba4a    # color11
+
+# Surfaces
+set $surface_0     #1d202f    # color0
+set $surface_1     #252940
+set $surface_2     #2e3c64    # selection_background
+
+# -- Client Configuration --
+client.focused          $border_active $surface_1 $text      $red       $border_active
+client.focused_inactive $border_inactive $base    $text_muted $surface_0 $border_inactive
+client.unfocused        $border_inactive $base    $text_faded $surface_0 $border_inactive
+client.urgent           $red_urgent    $base      $text      $red_urgent $red_urgent
+client.placeholder      $border_inactive $base    $text      $surface_0  $border_inactive
+client.background       $base
