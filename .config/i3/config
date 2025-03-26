@@ -199,31 +199,31 @@ set $mantle        #161622
 set $crust         #11111b
 
 # Text/UI
-set $text          #c0caf5    # foreground
-set $text_muted    #a9b1d6    # subtext1
-set $text_faded    #565f89    # overlay2 (comments)
-set $border_active #7aa2f7    # active_border_color (color4)
-set $border_inactive #292e42  # inactive_border_color
+set $text          #c0caf5    
+set $text_muted    #a9b1d6    
+set $text_faded    #565f89    
+set $border_active #7aa2f7    
+set $border_inactive #292e42  
 
 # Core Palette
-set $red           #f7768e    # color1 (errors)
-set $orange        #ff9e64    # color16 (numbers/constants)
-set $yellow        #e0af68    # color3 (operators)
-set $green         #9ece6a    # color2 (strings)
-set $teal          #73daca    # url_color
-set $blue          #7aa2f7    # color4 (functions)
-set $purple        #bb9af7    # color5 (keywords)
-set $cyan          #7dcfff    # color6
+set $red           #f7768e    
+set $orange        #ff9e64    
+set $yellow        #e0af68    
+set $green         #9ece6a    
+set $teal          #73daca   
+set $blue          #7aa2f7    
+set $purple        #bb9af7    
+set $cyan          #7dcfff    
 
 # Extended
-set $red_bright    #ff899d    # color9
-set $red_urgent    #db4b4b    # color17 (kitty's extended red)
-set $orange_bright #faba4a    # color11
+set $red_bright    #ff899d    
+set $red_urgent    #db4b4b    
+set $orange_bright #faba4a    
 
 # Surfaces
-set $surface_0     #1d202f    # color0
+set $surface_0     #1d202f    
 set $surface_1     #252940
-set $surface_2     #2e3c64    # selection_background
+set $surface_2     #2e3c64    
 
 # -- Client Configuration --
 client.focused          $border_active $surface_1 $text      $red       $border_active
