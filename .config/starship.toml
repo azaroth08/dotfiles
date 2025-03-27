@@ -26,7 +26,7 @@ $time\
 [ ](fg:purple)\
 $line_break$character"""
 
-palette = 'catppuccin_mocha'
+palette = 'tokyostorm_night'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -67,6 +67,56 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[palettes.tokyostorm_night]
+# Base
+base      = "#1a1b26"   # Background
+mantle    = "#161622"   # Darker base
+crust     = "#11111b"   # Darkest layer
+
+# Text/UI
+text      = "#c0caf5"   # Primary text
+subtext1  = "#a9b1d6"   # Muted text
+subtext0  = "#9099c2"   # Secondary text
+overlay2  = "#565f89"   # Comments
+overlay1  = "#3b4261"   # Line numbers
+overlay0  = "#292e42"   # Inactive elements
+
+# Syntax Accents (your original names preserved)
+rosewater = "#f7768e"   # Errors/Warnings (prev pinkish)
+flamingo  = "#ff899d"   # Bright red (color9)
+pink      = "#bb9af7"   # Keywords/Purple
+orange    = "#ff9e64"   # Constants (prev purple → orange)
+red       = "#f7768e"   # Base error red
+maroon    = "#db4b4b"   # Urgent red (color17)
+peach     = "#ff9e64"   # Numbers/Constants
+yellow    = "#e0af68"   # Operators
+green     = "#9ece6a"   # Strings
+teal      = "#73daca"   # Variables/URLs
+sky       = "#7dcfff"   # Cyan
+sapphire  = "#74c7ec"   # Light blue (unused in Tokyo)
+blue      = "#7aa2f7"   # Functions/Headers
+lavender  = "#bb9af7"   # Alternate purple
+
+# Surfaces
+surface2  = "#33467c"   # Selection highlight
+surface1  = "#252940"   # Dark UI panels
+surface0  = "#1f2335"   # Darkest UI elements
+
+# Focused elements
+focused = "#7aa2f7"
+urgent  = "#db4b4b" 
+neutral = "#292e42"
+
+primary_text   = "#c0caf5"
+secondary_text = "#a9b1d6"
+disabled_text  = "#565f89"
+
+warning = "#ff9e64"
+success = "#9ece6a"
+alert   = "#ff899d"
+
+
 
 [os]
 disabled = false
@@ -188,3 +238,4 @@ vimcmd_symbol = '[](bold fg:creen)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:lavender)'
+
