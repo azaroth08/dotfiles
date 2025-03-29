@@ -1,15 +1,40 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+#format = """
+#[](surface0)\
+#$os\
+#$username\
+#[](bg:peach fg:surface0)\
+#$directory\
+#[](fg:peach bg:green)\
+#$git_branch\
+#$git_status\
+#[](fg:green bg:teal)\
+#$c\
+#$rust\
+#$golang\
+#$nodejs\
+#$php\
+#$java\
+#$kotlin\
+#$haskell\
+#$python\
+#[](fg:teal bg:blue)\
+#$docker_context\
+#[](fg:blue bg:purple)\
+#$time\
+#[ ](fg:purple)\
+#$line_break$character"""
+
 format = """
-[](surface0)\
+[░▒▓](white)\
 $os\
-$username\
-[](bg:peach fg:surface0)\
+[](fg:white bg:subtext1)\
 $directory\
-[](fg:peach bg:green)\
+[](fg:subtext1 bg:disabled_text)\
 $git_branch\
 $git_status\
-[](fg:green bg:teal)\
+[](fg:disabled_text bg:black)\
 $c\
 $rust\
 $golang\
@@ -19,12 +44,8 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:teal bg:blue)\
-$docker_context\
-[](fg:blue bg:purple)\
-$time\
-[ ](fg:purple)\
-$line_break$character"""
+[](fg:black)\
+\n$character"""
 
 palette = 'tokyostorm_night'
 
@@ -74,6 +95,12 @@ base      = "#1a1b26"   # Background
 mantle    = "#161622"   # Darker base
 crust     = "#11111b"   # Darkest layer
 
+white = "#c0caf5"
+black = "#1a1b26"
+storm_blue = "#7aa2f7"
+select_bg = "#364a82"
+back = "#24283b"
+
 # Text/UI
 text      = "#c0caf5"   # Primary text
 subtext1  = "#a9b1d6"   # Muted text
@@ -115,12 +142,13 @@ disabled_text  = "#565f89"
 warning = "#ff9e64"
 success = "#9ece6a"
 alert   = "#ff899d"
+text2 = "#9aa5ce"
 
 
 
 [os]
 disabled = false
-style = "bg:surface0 fg:text"
+style = "bg:white fg:black"
 
 [os.symbols]
 Windows = "󰍲"
@@ -150,7 +178,7 @@ style_root = "bg:surface0 fg:text"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:mantle bg:peach"
+style = "fg:mantle bg:subtext1"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -164,62 +192,63 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:teal"
-format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
+style = "bg:back"
+format = '[[ $symbol $branch ](fg:base bg:disabled_text)]($style)'
 
 [git_status]
 style = "bg:teal"
-format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
+format = '[[($all_status$ahead_behind )](fg:base bg:disabled_text)]($style)'
 
 [nodejs]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [c]
 symbol = " "
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [php]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [java]
 symbol = " "
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [kotlin]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [haskell]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [python]
 symbol = ""
 style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+format = '[[ $symbol( $version) ](fg:secondary_text bg:black)]($style)'
 
 [docker_context]
 symbol = ""
 style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:base bg:blue)]($style)'
+format = '[[ $symbol( $context) ](fg:secondary_text bg:black)]($style)'
+
 
 [time]
 disabled = true
